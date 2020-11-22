@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>payment</title>
+    <link rel="stylesheet" href="Payment.css" >
+  </head>
+  <body id="payment">
+  <section class="div1">
+  <h1 class="name" align="right" style="font-weight: bold; font-size: 70px; color: white; top: 10px;">Playo</h1>
+  <a href="About.html#about"><input type="button" value="About" onclick="#" class="non1"></a>
+  <a href="Help.html#help"><input type="button" value="Help" onclick="#" class="non2"></a>
+  
+  </section>
+    <form class="py_form" action="home.html#home">
+    <div class="py_title">
+      <div class="title">
+        <div class="title_name"><h3 align="left">payment&nbsp;
+          <img src="visa.png"/>
+          <img src="master.png"/>
+          <img src="paypal.png"/></h3>
+        </div>
+          
+        <div class="dropdown">
+          <label for=""></label>
+        </div>
+        <div class="fm_input">
+          <label for="name" >Name <br>
+            <input type="text" placeholder=" Name" class="nm" required autofocus></label>
+        </div>
+        <div class="fm_input">
+          <label for="c-card">card number <br>
+            <input type="text" placeholder=" - - - -  - - - -  - - - -  - - - -" class="card" required pattern="[0-9]{16}"></label>
+        </div>
+        <div class="fm_input">
+          <label for="">Expiry date <br><input type="text" placeholder="  MM / YYYY" class="ex" required pattern="[0-9]{2}/[0-9]{4}" title="Keep the format in mind"></label>
+        </div>
+        <div class="fm_input">
+          <label for="">CVV &nbsp;&nbsp;<input type="" placeholder="  - - - " class="cvv" required pattern="[0-9]{3}" title="Triple digit only"></label>
+        </div>
+        
+        <div class="sbmt">
+           <button type="submit" id="clickk" class="final">Make Payment</button>
+        </div>
+    <div>
+</form>
+  </body>
+</html>

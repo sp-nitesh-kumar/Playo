@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+<style>
+
+	html{
+	font-family:sans-serif;
+	color:#333;
+	}
+	
+	body{
+		background:url('412.jpeg');
+		margin:30px;
+	}
+	
+	.name{
+		color: red;
+	}
+
+		.non1{
+	background-color:black;
+	font-weight: bold;
+	width: 100px;
+	height: 50px;
+	color: white;
+	font-size: 20px;
+	margin-left:1090px;
+	top: 13%;
+	position: absolute;
+	display: block;
+	opacity: 0.8;
+	}
+
+	.non1:hover{
+		background-color: red;
+	}
+
+	.non2{
+	background-color:black;
+	font-weight: bold;
+	width: 100px;
+	height: 50px;
+	color: white;
+	font-size: 20px;
+	margin-left:1210px;
+	top: 13%;
+	position: absolute;
+	display: block;
+	opacity: 0.8;
+	}
+
+	.non2:hover{
+		background-color: red;
+	}
+
+	.non3{
+	background-color:black;
+	font-weight: bold;
+	width: 100px;
+	height: 50px;
+	color: white;
+	font-size: 20px;
+	margin-left:1330px;
+	top: 13%;
+	position: absolute;
+	display: block;
+	opacity: 0.8;
+	}
+
+	.non3:hover{
+		background-color: red;
+	}
+
+	.div2{
+	background-color: rgb(77, 77, 77);
+	width: 100%;
+	height: 120px;
+	}
+
+	*{
+  margin: 0px;
+  padding: 0px;
+}
+
+	.btn{
+		background:#333;
+		color:#fff;
+		padding:0.6rem 1.3rem;
+		text-decoration:none;/*to remove the underline*/
+	}
+	
+	img{
+		max-width:100%;
+	}
+		
+	.wrapper{
+		display:grid;
+		grid-gap:20px;
+		font-weight: bold;
+	}
+	
+	.main-nav ul{
+		display:grid;
+		grid-gap:20px;	
+		padding:0;
+		list-style:none;
+		grid-template-columns:1fr 1fr 1fr 1fr;			
+	}
+	
+	.main-nav a{
+		background:#ddd;
+		display:block;
+		text-decoration:none;
+		padding:0.8rem;
+		text-align:center;
+		color:#333;
+		text-transform:uppercase;
+		font-size:1.1rem;
+		box-shadow:0 1px 5px rgba(104,104,104,0.8);
+	}
+	
+	.main-nav a:hover{
+		background:#333;
+		color:#fff;	
+	}
+
+	.top-container{
+	display:grid;
+	grid-gap:20px;
+	grid-template-areas:
+		'showcase showcase top-box-a'
+		'showcase showcase top-box-b';
+	}
+	
+	.showcase{
+		grid-area:showcase;
+		min-height:400px;
+		background:url('62853483-sports-wallpapers.jpg');
+		background-size:cover;
+		background-position:center;
+		padding:3rem;
+		display:flex;
+		flex-direction:column;
+		align-items:start;
+		justify-content:center;
+		box-shadow:0 1px 5px rgba(104,104,104,0.8);
+	}
+	
+	.showcase h1{
+		font-size:4rem;
+		margin-bottom:0;
+		color:#fff;
+	}
+	
+	.showcase p{
+		font-size:1.3rem;
+		margin-top:0;
+		color:#fff;	
+	} 
+	
+	.top-box{
+	background:#ddd;
+	display:grid;
+	align-items:center;
+	justify-items:center;
+	box-shadow:0 1px 5px rgba(104,104,104,0.8);
+	padding:1rem;
+	}
+
+	.top-box .price{
+		font-size:2.5rem;
+	}	
+	/*aligns it left to right*/
+	.boxes{
+		display:grid;
+		grid-gap:20px;
+		grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+	}
+	/*puts the individual content into a box*/
+	.box{
+		background:#ddd;
+		text-align:center;
+		padding:1rem;
+		box-shadow:0 1px 5px rgba(104,104,104,0.8);
+	}
+
+	.info{
+		background:#ddd;
+		box-shadow:0 1px 5px rgba(104,104,104,0.8);
+		display:grid;
+		grid-gap:30px;
+		grid-template-columns:repeat(2,1fr);
+		padding:3rem;	
+	}
+	/*.top-box-a{
+		grid-area:topbox-a;
+	}
+
+	.top-box-b{
+		grid-area:topbox-b;
+	}*/
+	.portfolio{
+		display:grid;
+		grid-gap:20px;
+		grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+	}
+
+	.portfolio img{
+		width:100%;
+		box-shadow:0 1px 5px rgba(104,104,104,0.8);	
+	}
+
+	footer{
+		margin-top:2rem;
+		background:#333;
+		color:#fff;
+		text-align:center;
+		padding:1rem;	
+	}
+
+	* {box-sizing: border-box}
+</style>
+</head>
+<body id="home">
+	<div class="wrapper">
+	<section class="div2">
+		<i><h1 class="name" align="center" style="font-weight: bold; font-size: 70px; color: white; top: 10px;">Playo</h1></i>
+		<a href="About.html#about"><input type="button" value="About" onclick="#" class="non1"></a>
+		<a href="Help.html#help"><input type="button" value="Help" onclick="#" class="non2"></a>
+		
+	</section>
+	<!--top container-->
+	<section class="top-container">
+		<header class="showcase">
+		<h1 style="font-size: 50px; font-weight: bold;">Introduction to the Website</h1>
+		<p style="font-weight: bold;">
+Sports and exercize are very very  essential in our day-day life.
+This Website describes  the basic of sports and explains the importence of it.
+This website mainly provides a medium to play sports in your nearby grounds,courts,stadiums, etc.
+		</header>
+		<div class="top-box top-box-a">
+		<h4 style="font-size: 30px">Coaching</h4>
+		<p class="price">Rs 4,999</p>
+		<a href="Payment.html#Payment" class="btn">Join Now</a>
+		</div>
+		<div class="top-box top-box-b">
+		<h4 style="font-size: 30px">Advance Coaching</h4>
+		<p class="price">Rs 8,999</p>
+		<a href="Payment.html#Payment" class="btn">Join Now</a>
+		</div>
+	</section>
+	<!-- boxes section -->
+	<section class="boxes">
+		<div class="box">
+		<i class="fas fa-chart-pie fa-4x"></i>
+		<a href="inf.html#inf"><h3>Introduction to Sports</h3></a>
+		<p>
+			Sport (British English) or sports (American English) includes all forms of competitive physical activity or games which, through casual or organised participation, aim to use, maintain or improve physical ability and skills while providing enjoyment to participants, and in some cases, entertainment for spectators.
+		</p>
+		</div>
+		<div class="box">
+		<i class="fas fa-globe fa-4x"></i>
+		<a href="inf1.html#inf1"><h3>Types of Sports</h3></a>
+		<p>
+There are many different kind of sports and games.There are many classification based on number of players, ability, material used, etc.
+		</p>
+		</div>
+		<div class="box">
+		<i class="fas fa-cogs fa-4x"></i>
+		<a href="inf2.html#inf2"><h3>Advantages</h3></a>
+		<p>
+Playing sports is a favorite activity for many people around the world. It provides us with enjoyment and also freshens up our mind.It helps in the toning of muscles and strengthening of bones. It also brings positive energy, discipline, and helps in building self-esteem and mutual respect.
+		</p>
+		</div>
+		<div class="box">
+		<i class="fas fa-users fa-4x"></i>
+		<a href="inf3.html#inf3"><h3>Quotes</h3></a>
+		<p>
+Importance of sports  by great people. 
+		</p>
+		</div>
+	</section>
+	
+	<!-- info section-->
+	<section class="info">
+		<img src="Ibf53ql.jpg">
+		<div>
+		<h2>Your bussiness on the web page</h2>
+		<p>
+So there are many sports  clubs and academy's provided in this website, there are various games like cricket,badminton,football,etc avialable in these cubs.<p>
+	<br>
+		<a href="club.html#club" class="btn">Play Now</a>
+	</div>
+	</section>
+	<!-- portfolio section-->
+	<section class="portfolio">
+	<img src="Cool-Sports-HD-Backgrounds.jpg" height=200px width=200px/>
+	<img src="astana_rider.jpg" height=200px width=200px/>
+	<img src="Kids sports chart.png" height=200px width=200px/>
+	<img src="logo-design-for-Arena-Sports.jpg" height=200px width=200px/>
+	<img src="sports-logo-new.png" height=200px width=200px/>
+	<img src="why_tennis.jpg" height=200px width=200px/>
+	</section>
+	<footer>
+	<p>Sports &copy</p>
+	</footer>
+  </div>
+</body>
+</html>	
+	

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html manifest="demo.appcache">
+  <head>
+    <meta charset="utf-8">
+    <title>About</title>
+    <link rel="stylesheet" href="About.css">
+  </head>
+  <body id="about">
+    <section class="div1">
+  <i><h1 class="name" align="center" style="font-weight: bold; font-size: 70px; color: white; top: 10px;">Playo</h1></i>
+    <a href="home.html#home"><input type="button" value="Home" onclick="#" class="non1"></a>
+    <a href="Help.html#help"><input type="button" value="Help" onclick="#" class="non2"></a>
+  </section>
+  <br> <br>
+  <canvas id="canvas" width="300" height="300"></canvas>
+<script>
+var sun = new Image();
+var moon = new Image();
+var earth = new Image();
+function init() {
+  sun.src = 'Canvas_sun.png';
+  moon.src = 'Canvas_moon.png';
+  earth.src = 'Canvas_earth.png';
+  window.requestAnimationFrame(draw);
+}
+
+function draw()
+ {
+  var context = document.getElementById('canvas').getContext('2d');
+
+  context.globalCompositeOperation = 'destination-over';
+  context.clearRect(0, 0, 500, 500); // clear canvas
+
+  context.fillStyle = 'rgba(0, 0, 0, 0.4)';
+  context.strokeStyle = 'rgba(0, 153, 255, 0.4)';
+  context.save();
+  context.translate(150, 150);
+
+  // Earth
+  var time = new Date();
+  context.rotate(((2 * Math.PI) / 60) * time.getSeconds() + ((2 * Math.PI) / 60000) * time.getMilliseconds());
+  context.translate(105, 0);
+  context.fillRect(0, -12, 50, 24); // Shadow
+  context.drawImage(earth, -12, -12);
+
+  // Moon
+  context.save();
+  context.rotate(((2 * Math.PI) / 6) * time.getSeconds() + ((2 * Math.PI) / 6000) * time.getMilliseconds());
+  context.translate(0, 28.5);
+  context.drawImage(moon, -3.5, -3.5);
+  context.restore();
+
+  context.restore();
+  
+  context.beginPath();
+  context.arc(150, 150, 105, 0, Math.PI * 2, false); // Earth orbit
+  context.stroke();
+ 
+  context.drawImage(sun, 0, 0, 300, 300);
+
+  window.requestAnimationFrame(draw);
+}
+
+init();
+</script>
+    <div class="header">
+       <h1 style="font-size: 50px; font-weight: bold; color: black; margin-top: 50%" align="center">About club</h1>
+       <br><br>
+       <blockquote style="font-size: 30px; font-weight: bold; color: black;">
+         Introduction
+       </blockquote>
+       <br>
+          <blockquote style="font-size: 20px; font-weight: bold; color: black;">
+            Playo is platform to know and play sports.Sports being one the most essential parts of our life,Playo aims at providing good information, medium to play in grounds,court's,etc acroos the city. It has wide range of clubs and academy's to play in.Playo is constantly working on improving by giving various options to play, various games to play.
+          </blockquote>
+          <br><br>
+       <blockquote style="font-size: 30px; font-weight: bold; color: black;" >
+         Clubs
+       </blockquote><br>
+                <blockquote style="font-size: 20px; font-weight: bold; color: black;">Playo understands that it's customer needs  and cataers them to choice of games,clubs,equipments and it ia trying to meet the requiremnts  by updating regurlarly.Prominent clubs in Bangalore such ass KICKSHACK,SPORTINGO,BIGBOX are available in this website.You can also afford to go for coaching available at each club.High class and international range of courts and grounds are built in these clubs.</blockquote><br><br>
+       <blockquote style="font-size: 30px; font-weight: bold; color: black;">
+         Value Proposition
+       </blockquote><br>
+              <blockquote style="font-size: 20px; font-weight: bold; color: black;">Playo's value proposition revolves around giving customers the power and ease of renting the courts on hourly basis.Offering international range of courts are available at very cheao and affordable price for everyone.</blockquote>
+    </div>
+  </div>
+  <div class="demo" style="margin-left: 25px;">
+    <br><br>
+    <h1>Rate Us from 1 to 10</h1>
+    <br>
+    <form>
+      <input id="item" type="number" placeholder="Rate Us" max="10" min="0" style="height: 30px; width: 80px;">
+    </form>
+    <br>
+    <h2>Name</h2>
+    <br>
+    <ul></ul>
+
+    <button style="width: 100px; height: 30px;">Clear All</button>
+  </div>
+
+
+<script>
+const form = document.querySelector('form');
+const ul = document.querySelector('ul');
+const button = document.querySelector('button');
+const input = document.getElementById('item');
+let itemsArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
+
+localStorage.setItem('items', JSON.stringify(itemsArray));
+const data = JSON.parse(localStorage.getItem('items'));
+
+const lists = (text) => {
+  const li = document.createElement('li');
+  li.textContent = text;
+  ul.appendChild(li);
+}
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault();
+
+  itemsArray.push(input.value);
+  localStorage.setItem('items', JSON.stringify(itemsArray));
+  lists(input.value);
+  input.value = "";
+});
+
+data.forEach(item => {
+  lists(item);
+});
+
+button.addEventListener('click', function () {
+  localStorage.clear();
+  while (ul.firstChild) {
+    ul.removeChild(ul.firstChild);
+  }
+});
+</script>
+  </body>
+</html>
